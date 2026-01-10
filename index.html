@@ -6,29 +6,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body { font-family: Arial, sans-serif; margin:0; background:#fff7f0; }
-header { background:#ff8c42; color:white; padding:20px; text-align:center; }
-.product { background:white; margin:15px; padding:15px; border-radius:10px; }
-button { background:#ff8c42; color:white; padding:10px; border:none; border-radius:5px; }
-footer { text-align:center; padding:15px; background:#333; color:white; }
-
-.image-slider {
-  display: flex;
-  overflow-x: auto;
-  gap: 10px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff7f0;
 }
 
-.image-slider img {
-  width: 250px;
+header {
+  background: #ff8c42;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background: #ffe2cf;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  margin: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.product {
+  background: white;
+  margin: 15px;
+  padding: 15px;
   border-radius: 10px;
-  scroll-snap-align: center;
-  flex-shrink: 0;
+  text-align: center;
 }
 
-.image-slider::-webkit-scrollbar {
-  display: none;
+button {
+  background: #ff8c42;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>
 </head>
@@ -36,134 +54,36 @@ footer { text-align:center; padding:15px; background:#333; color:white; }
 <body>
 
 <header>
-<h1>🛍 Garuda Arts and Fashion Store</h1>
-<p>Premium Products | Handmade & Quality Assured</p>
+<h1>Garuda Arts and Fashion Store</h1>
+<p>Handmade | Fashion | Gifts</p>
 </header>
-  <div style="text-align:center; padding:15px;">
-  <input type="text" id="searchInput" placeholder="Search products..."
-    style="width:80%; max-width:400px; padding:10px; border-radius:8px; border:1px solid #ccc;"
-    onkeyup="searchProducts()">
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="hair-accessories.html">Hair Accessories</a>
+  <a href="candles.html">Candles</a>
+  <a href="gifts.html">Gifts</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="product">
+  <h2>Hair Accessories</h2>
+  <p>Artificial pollen, clips & custom designs</p>
+  <a href="hair-accessories.html"><button>View Products</button></a>
 </div>
 
-
-<!-- PRODUCT 1 -->
-<div class="product product-item">
-<h2>Artificial Pollen Grain (Customization available)</h2>
-
-<div class="image-slider">
-  <img src="images/pollen1.jpeg">
-  <img src="images/pollen2.jpeg">
-  <img src="images/pollen3.jpeg">
+<div class="product">
+  <h2>Candles</h2>
+  <p>Decorative & scented candles</p>
+  <a href="candles.html"><button>View Products</button></a>
 </div>
 
-<p>Price: ₹120</p>
-
-<details>
-  <summary>📖 View Product Description</summary>
-  <p>
-    • Handmade with premium materials<br>
-    • Multicolours available<br>
-    • Reusable<br>
-    • Perfect for gifting & hair decoration
-  </p>
-</details>
-
-<a href="https://wa.me/919884843275?text=
-Hello%20Garuda%20Arts%20%26%20Fashion%20👋%0A%0A
-I%20would%20like%20to%20order:%0A
-🪷%20Product:%20Artificial%20Pollen%20Grain%0A
-💰%20Price:%20₹120" target="_blank">
-<button>Order on WhatsApp</button>
-</a>
+<div class="product">
+  <h2>Gift Items</h2>
+  <p>Perfect gifts for every occasion</p>
+  <a href="gifts.html"><button>View Products</button></a>
 </div>
-
-<!-- PRODUCT 2 -->
-<div class="product product-item">
-<h2>Artificial Pollen Clip (Customization available)</h2>
-
-<div class="image-slider">
-  <img src="images/pollenclip.jpeg">
-</div>
-
-<p>Price: ₹100</p>
-
-<details>
-  <summary>📖 View Product Description</summary>
-  <p>
-    • Handmade with premium materials<br>
-    • Multicolours available<br>
-    • Reusable<br>
-    • Perfect for gifting & hair decoration
-  </p>
-</details>
-
-<a href="https://wa.me/919884843275?text=
-Hello%20Garuda%20Arts%20%26%20Fashion%20👋%0A%0A
-I%20would%20like%20to%20order:%0A
-🪷%20Product:%20Artificial%20Pollen%20Clip%0A
-💰%20Price:%20₹100" target="_blank">
-<button>Order on WhatsApp</button>
-</a>
-</div>
-
-<!-- LINKS -->
-<p style="text-align:center;">
-  <a href="#about">About Us</a> |
-  <a href="#contact">Contact Us</a> |
-  <a href="#privacy">Privacy Policy</a>
-</p>
-
-<!-- ABOUT US -->
-<section id="about" class="product">
-<h2>About Us</h2>
-<p>
-Garuda Arts and Fashion Store is a handmade business offering
-artificial accessories, fashion items, and customized products.
-We focus on quality, beauty, and customer satisfaction.
-</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="product">
-<h2>Contact Us</h2>
-<p>
-📍 Chennai, India<br>
-📞 WhatsApp: +91 98848 43275<br>
-📧 Email: garudaarts@gmail.com
-</p>
-</section>
-
-<!-- PRIVACY POLICY -->
-<section id="privacy" class="product">
-<h2>Privacy Policy</h2>
-<p>
-We respect your privacy. We do not collect personal information unless
-you voluntarily contact us via WhatsApp or email.
-</p>
-<p>
-Third-party vendors, including Google, use cookies to serve ads based on
-a user’s prior visits to this website.
-</p>
-<p>
-By using this website, you agree to this privacy policy.
-</p>
-</section>
-  <script>
-function searchProducts() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let products = document.getElementsByClassName("product-item");
-
-  for (let i = 0; i < products.length; i++) {
-    let text = products[i].innerText.toLowerCase();
-    products[i].style.display = text.includes(input) ? "block" : "none";
-  }
-}
-</script>
-
-
-<footer>
-<p>© 2026 Garuda Arts and Fashion Store</p>
-</footer>
 
 </body>
 </html>
