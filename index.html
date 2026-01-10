@@ -11,6 +11,26 @@ header { background:#ff8c42; color:white; padding:20px; text-align:center; }
 .product { background:white; margin:15px; padding:15px; border-radius:10px; }
 button { background:#ff8c42; color:white; padding:10px; border:none; border-radius:5px; }
 footer { text-align:center; padding:15px; background:#333; color:white; }
+
+/* ✅ IMAGE SLIDER STYLE */
+.image-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.image-slider img {
+  width: 250px;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+.image-slider::-webkit-scrollbar {
+  display: none;
+}
 </style>
 </head>
 
@@ -21,53 +41,38 @@ footer { text-align:center; padding:15px; background:#333; color:white; }
 <p>Premium Products | Handmade & Quality Assured</p>
 </header>
 
+<!-- PRODUCT 1 -->
 <div class="product">
-<h2> Artificial pollen grain  (Customization available)</h2>
+<h2>Artificial Pollen Grain (Customization available)</h2>
+
+<!-- ✅ CORRECT PLACE FOR IMAGE SLIDER -->
+<div class="image-slider">
+  <img src="images/pollen1.jpg">
+  <img src="images/pollen2.jpg">
+  <img src="images/pollen3.jpg">
+</div>
+
 <p>Price: ₹120</p>
-  <details>
-    <summary>📖 View Product Description</summary>
-    <p>
-      • Handmade with premium materials<br>
-      • Multicolours available<br>
-      • Reusable<br>
-      • Perfect for gifting & hair decoration
-    </p>
-  </details>
-   <a href="https://wa.me/919884843275?text=
+
+<details>
+  <summary>📖 View Product Description</summary>
+  <p>
+    • Handmade with premium materials<br>
+    • Multicolours available<br>
+    • Reusable<br>
+    • Perfect for gifting & hair decoration
+  </p>
+</details>
+
+<a href="https://wa.me/919884843275?text=
 Hello%20Garuda%20Arts%20%26%20Fashion%20👋%0A%0A
 I%20would%20like%20to%20order:%0A
 🪷%20Product:%20Artificial%20Pollen%20Grain%0A
-💰%20Price:%20₹120%0A%0A
-Customization%20required.%20Please%20confirm%20availability."
+💰%20Price:%20₹120"
 target="_blank">
-  <button>Order on WhatsApp</button>
+<button>Order on WhatsApp</button>
 </a>
-
-
-
-<div class="product">
-<h2> Artificial pollen grain clip (Customization available)</h2>
-<p>Price: ₹100</p>
-    <details>
-    <summary>📖 View Product Description</summary>
-    <p>
- • Handmade with premium materials<br>
-      • Multicolours available<br>
-      • Reusable<br>
-      • Perfect for gifting & hair decoration
-    </p>
-    </details>
-  
-  <a href="https://wa.me/919884843275?text=
-Hello%20Garuda%20Arts%20%26%20Fashion%20👋%0A%0A
-I%20would%20like%20to%20order:%0A
-🪷%20Product:%20Artificial%20Pollen%20Grain%20Clip%0A
-💰%20Price:%20₹100%0A%0A
-Customization%20required.%20Please%20confirm%20availability."
-target="_blank">
-  <button>Order on WhatsApp</button>
-</a>
-
+</div>
 
 <footer>
 <p>© 2026 Garuda Arts and Fashion Store</p>
