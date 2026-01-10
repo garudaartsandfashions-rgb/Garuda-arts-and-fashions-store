@@ -6,113 +6,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-  font-family: Arial;
-  margin: 0;
-  background: #fff7f0;
-}
-
-header {
-  background: #ff8c42;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-nav {
-  background: #ffe2cf;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  margin: 8px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.search-box {
-  text-align: center;
-  margin: 15px;
-}
-
-.search-box input {
-  padding: 10px;
-  width: 70%;
-  max-width: 350px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.product {
-  background: white;
-  margin: 15px;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-button {
-  background: #ff8c42;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+body { font-family: Arial; margin:0; background:#fff7f0; }
+header { background:#ff8c42; color:white; padding:20px; text-align:center; }
+nav { background:#ffe2cf; padding:10px; text-align:center; }
+nav a { margin:8px; text-decoration:none; color:#333; font-weight:bold; }
+.search-box { text-align:center; margin:15px; }
+.search-box input { padding:10px; width:70%; max-width:350px; border-radius:5px; border:1px solid #ccc; }
+.product { background:white; margin:15px; padding:15px; border-radius:10px; text-align:center; }
+button { background:#ff8c42; color:white; padding:10px 15px; border:none; border-radius:5px; cursor:pointer; }
 </style>
 
 <script>
 function searchProduct() {
   let input = document.getElementById("searchInput").value.toLowerCase();
   let products = document.getElementsByClassName("product");
-
   for (let i = 0; i < products.length; i++) {
     let text = products[i].innerText.toLowerCase();
     products[i].style.display = text.includes(input) ? "block" : "none";
   }
 }
 </script>
-</head>
 
+</head>
 <body>
 
 <header>
-  <h1>Garuda Arts and Fashion Store</h1>
-  <p>Handmade • Fashion • Gifts</p>
+<h1>Garuda Arts and Fashion Store</h1>
+<p>Handmade • Fashion • Gifts</p>
 </header>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="hair-accessories.html">Hair Accessories</a>
-  <a href="candles.html">Candles</a>
-  <a href="gifts.html">Gifts</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="hair-accessories.html">Hair Accessories</a>
+<a href="candles.html">Candles</a>
+<a href="gifts.html">Gifts</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </nav>
 
 <div class="search-box">
-  <input type="text" id="searchInput" onkeyup="searchProduct()" placeholder="Search products...">
-</div>
-
-<!-- Categories -->
-<div class="product">
-  <h2>Hair Accessories</h2>
-  <p>Artificial pollen, clips & custom designs</p>
-  <a href="hair-accessories.html"><button>View Products</button></a>
+<input type="text" id="searchInput" onkeyup="searchProduct()" placeholder="Search products...">
 </div>
 
 <div class="product">
-  <h2>Candles</h2>
-  <p>Decorative & handmade candles</p>
-  <a href="candles.html"><button>View Products</button></a>
+<h2>Hair Accessories</h2>
+<p>Artificial pollen, clips & custom designs</p>
+<a href="hair-accessories.html"><button>View Products</button></a>
 </div>
 
 <div class="product">
-  <h2>Gift Items</h2>
-  <p>Perfect gifts for special occasions</p>
-  <a href="gifts.html"><button>View Products</button></a>
+<h2>Candles</h2>
+<p>Decorative & handmade candles</p>
+<a href="candles.html"><button>View Products</button></a>
+</div>
+
+<div class="product">
+<h2>Gift Items</h2>
+<p>Perfect gifts for special occasions</p>
+<a href="gifts.html"><button>View Products</button></a>
 </div>
 
 </body>
