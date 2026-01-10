@@ -12,6 +12,7 @@ body {
   background: #fff7f0;
 }
 
+/* HEADER */
 header {
   background: #ff8c42;
   color: white;
@@ -19,10 +20,11 @@ header {
   text-align: center;
 }
 
+/* NAVIGATION */
 nav {
   background: #ffe2cf;
-  text-align: center;
   padding: 10px;
+  text-align: center;
 }
 
 nav a {
@@ -32,6 +34,21 @@ nav a {
   font-weight: bold;
 }
 
+/* SEARCH BAR */
+.search-box {
+  text-align: center;
+  margin: 15px;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 70%;
+  max-width: 350px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* PRODUCT CARD */
 .product {
   background: white;
   margin: 15px;
@@ -49,13 +66,25 @@ button {
   cursor: pointer;
 }
 </style>
+
+<script>
+function searchProduct() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let products = document.getElementsByClassName("product");
+
+  for (let i = 0; i < products.length; i++) {
+    let text = products[i].innerText.toLowerCase();
+    products[i].style.display = text.includes(input) ? "block" : "none";
+  }
+}
+</script>
 </head>
 
 <body>
 
 <header>
-<h1>Garuda Arts and Fashion Store</h1>
-<p>Handmade | Fashion | Gifts</p>
+  <h1>Garuda Arts and Fashion Store</h1>
+  <p>Handmade • Fashion • Gifts</p>
 </header>
 
 <nav>
@@ -67,6 +96,11 @@ button {
   <a href="contact.html">Contact</a>
 </nav>
 
+<div class="search-box">
+  <input type="text" id="searchInput" onkeyup="searchProduct()" placeholder="Search products...">
+</div>
+
+<!-- CATEGORIES -->
 <div class="product">
   <h2>Hair Accessories</h2>
   <p>Artificial pollen, clips & custom designs</p>
@@ -75,13 +109,13 @@ button {
 
 <div class="product">
   <h2>Candles</h2>
-  <p>Decorative & scented candles</p>
+  <p>Decorative & handmade candles</p>
   <a href="candles.html"><button>View Products</button></a>
 </div>
 
 <div class="product">
   <h2>Gift Items</h2>
-  <p>Perfect gifts for every occasion</p>
+  <p>Perfect gifts for special occasions</p>
   <a href="gifts.html"><button>View Products</button></a>
 </div>
 
