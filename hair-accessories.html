@@ -10,14 +10,10 @@ body { font-family: Arial; margin:0; background:#fff7f0; }
 header { background:#ff8c42; color:white; padding:20px; text-align:center; }
 nav { background:#ffe2cf; text-align:center; padding:10px; }
 nav a { margin:8px; text-decoration:none; color:#333; font-weight:bold; }
-
 .search-box { text-align:center; margin:15px; }
 .search-box input { padding:10px; width:70%; max-width:350px; border-radius:5px; border:1px solid #ccc; }
-
 .product { background:white; margin:15px; padding:15px; border-radius:10px; text-align:center; }
-
 button { background:#ff8c42; color:white; padding:10px 15px; border:none; border-radius:5px; cursor:pointer; }
-
 .image-slider { display:flex; overflow-x:auto; gap:10px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; margin-bottom:10px; }
 .image-slider img { width:250px; border-radius:10px; scroll-snap-align:center; flex-shrink:0; }
 .image-slider::-webkit-scrollbar { display:none; }
@@ -33,6 +29,7 @@ function searchProduct() {
   }
 }
 </script>
+
 </head>
 <body>
 
@@ -44,4 +41,45 @@ function searchProduct() {
 <a href="index.html">Home</a>
 <a href="hair-accessories.html">Hair Accessories</a>
 <a href="candles.html">Candles</a>
-<a href="g
+<a href="gifts.html">Gifts</a>
+</nav>
+
+<div class="search-box">
+<input type="text" id="searchInput" onkeyup="searchProduct()" placeholder="Search hair products...">
+</div>
+
+<!-- Product 1 -->
+<div class="product">
+<h2>Artificial Pollen Grain</h2>
+<div class="image-slider">
+<img src="images/pollen1.jpeg" alt="Pollen 1">
+<img src="images/pollen2.jpeg" alt="Pollen 2">
+<img src="images/pollen3.jpeg" alt="Pollen 3">
+</div>
+<p>Price: ₹120</p>
+<details><summary>View Description</summary>
+<p>Handmade • Reusable • Custom colours</p>
+</details>
+<a href="https://wa.me/919884843275?text=Hello%20Garuda%20Arts%20%26%20Fashion%20👋%0AI%20would%20like%20to%20order:%0AProduct:%20Artificial%20Pollen%20Grain%0APrice:%20₹120%0AImage:%20https://username.github.io/repo-name/images/pollen1.jpeg%0AThank%20you." target="_blank">
+<button>Order on WhatsApp</button>
+</a>
+</div>
+
+<!-- Product 2 -->
+<div class="product">
+<h2>Artificial Pollen Clip</h2>
+<div class="image-slider">
+<img src="images/pollenclip1.jpeg" alt="Clip 1">
+<img src="images/pollenclip2.jpeg" alt="Clip 2">
+</div>
+<p>Price: ₹100</p>
+<details><summary>View Description</summary>
+<p>Handmade • Reusable • Perfect for gifts</p>
+</details>
+<a href="https://wa.me/919884843275?text=Hello%20Garuda%20Arts%20%26%20Fashion%20👋%0AI%20would%20like%20to%20order:%0AProduct:%20Artificial%20Pollen%20Clip%0APrice:%20₹100%0AImage:%20https://username.github.io/repo-name/images/pollenclip1.jpeg%0AThank%20you." target="_blank">
+<button>Order on WhatsApp</button>
+</a>
+</div>
+
+</body>
+</html>
