@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hair Accessories</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body { font-family: Arial; margin:0; background:#fff7f0; }
+header { background:#ff8c42; color:white; padding:20px; text-align:center; }
+nav { background:#ffe2cf; text-align:center; padding:10px; }
+nav a { margin:8px; text-decoration:none; color:#333; font-weight:bold; }
+
+.search-box { text-align:center; margin:15px; }
+.search-box input { padding:10px; width:70%; max-width:350px; border-radius:5px; border:1px solid #ccc; }
+
+.product { background:white; margin:15px; padding:15px; border-radius:10px; text-align:center; }
+
+button { background:#ff8c42; color:white; padding:10px 15px; border:none; border-radius:5px; cursor:pointer; }
+
+.image-slider { display:flex; overflow-x:auto; gap:10px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; margin-bottom:10px; }
+.image-slider img { width:250px; border-radius:10px; scroll-snap-align:center; flex-shrink:0; }
+.image-slider::-webkit-scrollbar { display:none; }
+</style>
+
+<script>
+function searchProduct() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let products = document.getElementsByClassName("product");
+  for(let i=0;i<products.length;i++){
+    let text = products[i].innerText.toLowerCase();
+    products[i].style.display = text.includes(input) ? "block" : "none";
+  }
+}
+</script>
+</head>
+<body>
+
+<header>
+<h1>Garuda Arts and Fashion Store</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="hair-accessories.html">Hair Accessories</a>
+<a href="candles.html">Candles</a>
+<a href="g
