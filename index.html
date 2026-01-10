@@ -47,7 +47,7 @@ footer { text-align:center; padding:15px; background:#333; color:white; }
 
 
 <!-- PRODUCT 1 -->
-<div class="product">
+<div class="product product-item">
 <h2>Artificial Pollen Grain (Customization available)</h2>
 
 <div class="image-slider">
@@ -78,7 +78,7 @@ I%20would%20like%20to%20order:%0A
 </div>
 
 <!-- PRODUCT 2 -->
-<div class="product">
+<div class="product product-item">
 <h2>Artificial Pollen Clip (Customization available)</h2>
 
 <div class="image-slider">
@@ -148,6 +148,18 @@ a user’s prior visits to this website.
 By using this website, you agree to this privacy policy.
 </p>
 </section>
+  <script>
+function searchProducts() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let products = document.getElementsByClassName("product-item");
+
+  for (let i = 0; i < products.length; i++) {
+    let text = products[i].innerText.toLowerCase();
+    products[i].style.display = text.includes(input) ? "block" : "none";
+  }
+}
+</script>
+
 
 <footer>
 <p>© 2026 Garuda Arts and Fashion Store</p>
